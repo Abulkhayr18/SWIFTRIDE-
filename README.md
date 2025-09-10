@@ -3,7 +3,7 @@
 
 A comprehensive data warehouse solution for ridesharing analytics, built using dimensional modeling principles to support business intelligence and reporting needs.
 
-## 🚀 Overview
+## Overview
 
 SwiftRide Data Warehouse is designed to handle large-scale ridesharing data with a focus on:
 - **Trip Analytics**: Complete trip lifecycle tracking and analysis
@@ -12,7 +12,7 @@ SwiftRide Data Warehouse is designed to handle large-scale ridesharing data with
 - **Customer Insights**: Rider behavior and satisfaction analysis
 - **Operational Intelligence**: Real-time and historical operational metrics
 
-## 📊 Architecture
+## Architecture
 
 ### Dimensional Model Design
 The warehouse follows a **star schema** approach with **Slowly Changing Dimensions (SCD Type 2)** for historical tracking:
@@ -33,7 +33,7 @@ The warehouse follows a **star schema** approach with **Slowly Changing Dimensio
 #### Staging Layer
 - **`staging_raw_trips`** - Raw data ingestion from operational systems
 
-## 🏗️ Database Schema
+##  Database Schema
 
 ### Key Features
 - **Surrogate Keys**: All dimensions use surrogate keys for better performance
@@ -48,7 +48,7 @@ The warehouse follows a **star schema** approach with **Slowly Changing Dimensio
 - Referential integrity with foreign key constraints
 - Default values and timestamps for audit trails
 
-## 📈 Analytics Capabilities
+##  Analytics Capabilities
 
 ### Pre-built Views
 1. **`v_trip_summary`** - Complete trip details with driver/rider information
@@ -62,7 +62,7 @@ The warehouse follows a **star schema** approach with **Slowly Changing Dimensio
 - **Quality Metrics**: Driver/rider ratings, satisfaction scores
 - **Performance Indicators**: Acceptance rates, cancellation rates, utilization
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - SQL Server 2016+ (uses DATETIME2, JSON support)
@@ -85,7 +85,7 @@ USE SWIFTRIDE;
 -- Run SWIFTRIDE.SQL.sql
 ```
 
-## 📊 Sample Queries
+## Sample Queries
 
 ### Top Performing Cities
 ```sql
@@ -108,7 +108,7 @@ WHERE monthly_earnings > 5000
 ORDER BY recent_rating DESC;
 ```
 
-## 🔧 Performance Optimization
+##  Performance Optimization
 
 ### Indexing Strategy
 - **Fact Table Indexes**: Foreign keys, timestamps, and frequently filtered columns
@@ -121,7 +121,7 @@ ORDER BY recent_rating DESC;
 - Utilize materialized views for frequent aggregations
 - Implement partitioning for large fact tables
 
-## 📋 Data Pipeline Integration
+##  Data Pipeline Integration
 
 ### Staging Process
 1. **Raw Data Ingestion**: Load operational data into `staging_raw_trips`
@@ -150,7 +150,7 @@ ORDER BY recent_rating DESC;
 - Backup and recovery procedures
 - Performance tuning and optimization reviews
 
-## 📚 Business Use Cases
+##  Business Use Cases
 
 ### Executive Dashboards
 - Revenue and profitability analysis
